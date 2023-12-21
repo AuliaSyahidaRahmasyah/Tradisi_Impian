@@ -269,6 +269,10 @@ body {
     font-size: 35px;
 }
 
+.home-content .judul-container .judul {
+    display: flex;
+}
+
 .home-section .home-content .judul-container {
     background-color: var(--coklat-tua);
     position: fixed;
@@ -430,9 +434,13 @@ p {
     background-color: #20c028;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 675px) {
     .product-item {
         width: 100%;
+    }
+
+    .judul-container .judul .bx-menu-alt-left {
+        display: none;
     }
 }
 

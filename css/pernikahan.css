@@ -270,6 +270,10 @@ body {
     font-size: 35px;
 }
 
+.home-content .judul-container .judul {
+    display: flex;
+}
+
 
 .home-section .home-content .judul-container {
     background-color: var(--coklat-tua);
@@ -280,7 +284,7 @@ body {
     width: 100%;
 }
 
-.home-section .home-content .bx-menu-alt-left {
+.home-content .judul-container .bx-menu-alt-left {
     margin: 0 15px;
     cursor: pointer;
 }
@@ -490,7 +494,8 @@ p {
     z-index: 1000;
     height: 600px;
     overflow: scroll;
-    width: 1200px;
+    max-width: 1100;
+    width: 75%;
     text-align: left;
 }
 
@@ -498,7 +503,11 @@ p {
     color: var(--putih);
 }
 
-.popup img {
+.popup .popup-container {
+    max-width: 1110px;
+}
+
+.popup .popup-container img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -516,6 +525,8 @@ p {
 }
 
 .popup .cart {
+    display: flex;
+    font-size: 15px;
     color: var(--putih);
     padding: 10px;
     border-radius: 5px;
@@ -605,14 +616,13 @@ footer span {
         max-width: 450px;
     }
 
-    .popup img {
-        width: 390px;
-        margin-left: -15px;
-    }
-
     .product-cart {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .judul-container .judul .bx-menu-alt-left {
+        display: none;
     }
 }
 
@@ -643,14 +653,5 @@ footer span {
     .sidebar.close~.home-section {
         width: 100%;
         left: 0;
-    }
-
-    .popup {
-        width: 300px;
-    }
-
-    .popup img {
-        width: 390px;
-        margin-left: -15px;
     }
 }

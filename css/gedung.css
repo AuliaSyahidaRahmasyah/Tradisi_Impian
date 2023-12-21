@@ -269,6 +269,10 @@ body {
     font-size: 35px;
 }
 
+.home-content .judul-container .judul {
+    display: flex;
+}
+
 .home-section .home-content .judul-container {
     background-color: var(--coklat-tua);
     position: fixed;
@@ -646,6 +650,10 @@ footer span {
     .product-cart {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .judul-container .judul .bx-menu-alt-left {
+        display: none;
     }
 }
 
