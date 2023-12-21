@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Gedung Pernikahan | Tradisi Impian </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/gedung.css">
+    <link rel="icon" href="/assets/logo TI.png">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <a href="index.html"><img src="/assets/logo TI.png" alt="Tradisi Impian"></a>
+            <span class="logo_name">TradisiImpian</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                        <span class="link_name">Paketan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                    <li><a href="tunangan.html">Tunangan</a></li>
+                    <li><a href="pranikah.html">Pranikah</a></li>
+                    <li><a href="pernikahan.html">Pernikahan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="pembelian.html">
+                    <i class='bx bx-cart'></i>
+                    <span class="link_name">Pembelian</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="pembelian.html">Pembelian</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-customize'></i>
+                        <span class="link_name">Perlengkapan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Perlengkapan</a></li>
+                    <li><a href="#">Dekorasi</a></li>
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">Riasan Pengantin</a></li>
+                    <li><a href="#">Undangan Souvenir</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="gedung.html">
+                    <i class='bx bx-buildings'></i>
+                    <span class="link_name">Gedung</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="gedung.html">Gedung</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-camera-movie'></i>
+                    <span class="link_name">Dokumentasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dokumentasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-body'></i>
+                    <span class="link_name">MC/Enternainment</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">MC/Enternainment</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="/assets/logo TI.png" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Beranda</div>
+                    </div>
+                    <a href="#"> <i class='bx bx-log-out'></i> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <div class="judul-container">
+                <div class="judul">
+                    <i class='bx bx-menu-alt-left'></i>
+                    <span class="text">Layanan</span>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2><span>Gedung Pernikahan</span></h2>
+                <p>Selamat datang di Layanan Pernikahan kami yang memukau, di mana keindahan budaya Indonesia bertemu
+                    dengan kemewahan modern di dalam gedung pernikahan yang eksklusif! Kami dengan senang hati
+                    mempersembahkan pengalaman pernikahan yang memadukan kekayaan warisan budaya dengan sentuhan
+                    kontemporer.
+                </p>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Cari tempat yang anda inginkan...">
+                    <button onclick="searchProducts()" id="searchButton" aria-label="searchButton"><i
+                            class='bx bx-search-alt'></i></button>
+                </div>
+
+                <div id="noResults">
+                    <img src="/assets/eror.webp" alt="Data Yang Anda Cari Tidak Ada">
+                    <p>Maaf Tempat Yang Anda Cari Tidak Ada</p>
+                </div>
+
+                <div class="product-container">
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/ayana.webp" alt="Ayana Resort and Spa, Bali">
+                        <h3>Ayana Resort and Spa, Bali</h3>
+                        <p>Dengan pemandangan laut yang menakjubkan, Ayana Resort menawarkan ruang pernikahan dengan
+                            sentuhan budaya Bali yang khas, termasuk hiasan tradisional dan layanan adat.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/tugu.webp" alt="Tugu Kunstkring Paleis, Jakarta">
+                        <h3>Tugu Kunstkring Paleis, Jakarta</h3>
+                        <p>Gedung bersejarah yang mencerminkan gaya arsitektur Belanda dan memamerkan seni dan budaya
+                            Indonesia. Cocok untuk pernikahan yang menggabungkan nuansa kolonial dan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/hermitage.webp" alt="The Hermitage, Menteng, Jakarta">
+                        <h3>The Hermitage, Menteng, Jakarta</h3>
+                        <p>Sebuah hotel mewah dengan arsitektur art deco yang indah. Menawarkan ruang pernikahan yang
+                            elegan dengan sentuhan kemewahan.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/viceroy.webp" alt="The Viceroy Bali, Ubud">
+                        <h3>The Viceroy Bali, Ubud</h3>
+                        <p>Sebuah resort mewah di Ubud dengan desain yang menggabungkan unsur-unsur tradisional dan
+                            kemewahan modern. Ruang pernikahan di tepi tebing...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/alila.webp" alt="Alila Villas Uluwatu, Bali">
+                        <h3>Alila Villas Uluwatu, Bali</h3>
+                        <p>Dengan desain yang kontemporer dan berkelanjutan, Alila Villas Uluwatu menyajikan ruang
+                            pernikahan dengan latar belakang laut yang luas dan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/papandayan.webp" alt="The Papandayan, Bandung">
+                        <h3>The Papandayan, Bandung</h3>
+                        <p>Hotel yang memadukan gaya art deco dengan unsur-unsur lokal Sunda. Ruang pernikahan di sini
+                            menciptakan suasana yang unik dan anggun.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/grasia.webp" alt="Hotel Grasia, Semarang">
+                        <h3>Hotel Grasia, Semarang</h3>
+                        <p>Hotel Grasia merupakan salah satu hotel yang menyediakan fasilitas untuk pernikahan di
+                            Semarang. Dengan suasana yang elegan dan pelayanan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/trans.webp" alt="The Trans Luxury Hotel, Bandung">
+                        <h3>The Trans Luxury Hotel, Bandung</h3>
+                        <p>Gedung mewah dengan desain yang modern dan fasilitas bergaya. Cocok untuk pernikahan yang
+                            mencari...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/amanjiwo.webp" alt="Amanjiwo, Magelang">
+                        <h3>Amanjiwo, Magelang</h3>
+                        <p>Terletak dekat dengan Candi Borobudur, Amanjiwo menawarkan pengalaman pernikahan yang
+                            eksklusif dengan latar belakang alam dan budaya yang kaya.
+                        </p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/shangri.webp" alt="Shangri-La Hotel, Jakarta">
+                        <h3>Shangri-La Hotel, Jakarta</h3>
+                        <p>Sebuah hotel bintang lima yang menawarkan ruang pernikahan mewah dengan sentuhan tradisional
+                            Indonesia. Cocok untuk pernikahan yang elegan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/tentrem.webp" alt="Hotel Tentrem, Yogyakarta">
+                        <h3>Hotel Tentrem, Yogyakarta</h3>
+                        <p>Dengan arsitektur Jawa yang klasik, Hotel Tentrem menyediakan ruang pernikahan yang memadukan
+                            keanggunan dan kehangatan budaya Jawa.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/gedung/mesatila.webp" alt="MesaStila Resort and Spa, Magelang">
+                        <h3>MesaStila Resort and Spa, Magelang</h3>
+                        <p>Terletak di antara perkebunan kopi dan pegunungan, MesaStila menawarkan suasana yang tenang
+                            dengan bangunan...
+                        </p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail Pop Up -->
+                <div class="overlay" id="overlay1"></div>
+                <div class="popup" id="popup1">
+                    <div class="closeButton" onclick="hidePopup('popup1')"><i class='bx bx-x'></i></div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.998419530324!2d115.1366975750632!3d-8.786217091265767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2448af6f410a5%3A0x313ee67691a146ca!2sAyana%20Resort%20and%20Spa%20Bali!5e0!3m2!1sid!2sid!4v1702788452527!5m2!1sid!2sid"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3>Ayana Resort and Spa, Bali</h3>
+                    <p>Dengan pemandangan laut yang menakjubkan, Ayana Resort menawarkan ruang pernikahan dengan
+                        sentuhan budaya Bali yang khas, termasuk hiasan tradisional dan layanan adat.</p>
+                    <h3>Ringkasan Lokasi</h3>
+                    <p>Terletak di puncak tebing di Semenanjung Bukit, resor mewah ini berjarak 6 km dari taman Garuda
+                        Wisnu Kencana dan 15 km dari Pura Luhur Uluwatu.</p>
+                    <h3>Jadwal Operasional</h3>
+                    <table>
+                        <tr>
+                            <th>Hari</th>
+                            <th>Jam Operasional</th>
+                        </tr>
+                        <tr>
+                            <td>Senin</td>
+                            <td>07.00–19.00</td>
+                        </tr>
+                        <tr>
+                            <td>Selasa</td>
+                            <td>07.00–19.00</td>
+                        </tr>
+                        <tr>
+                            <td>Rabu</td>
+                            <td>07.00–19.00</td>
+                        </tr>
+                        <tr>
+                            <td>Kamis</td>
+                            <td>07.00–19.00</td>
+                        </tr>
+                        <tr>
+                            <td>Jumat</td>
+                            <td>07.00–19.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sabtu</td>
+                            <td>07.00–19.00</td>
+                        </tr>
+                        <tr>
+                            <td>Minggu</td>
+                            <td>07.00–19.00</td>
+                        </tr>
+                    </table>
+                    <h3>Foto</h3>
+                    <div class="gallery">
+                        <img src="/assets/gedung/foto1.webp" alt="Image 1">
+                        <img src="/assets/gedung/foto2.webp" alt="Image 2">
+                        <img src="/assets/gedung/foto3.webp" alt="Image 3">
+                        <img src="/assets/gedung/foto4.webp" alt="Image 4">
+                    </div>
+
+                    <a href="#" class="cart"><i class='bx bx-cart'></i>Pesan adat untuk menikah Sekarang</a>
+                </div>
+                <!-- Footer -->
+                <footer>
+                    <div class="footer-info">
+                        <p><i class='bx bx-phone-call'></i>+62 8901234567</p>
+                        <p><i class='bx bx-envelope'></i>tradisiimpian@gmail.com</p>
+                        <p><i class='bx bx-map'></i>Jl. Sejati Larasan</p>
+                    </div>
+                    <span>Copyright © 2023 Tradisi Impian. All Rights Reserved</span>
+                </footer>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <script src="/js/pernikahan.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Layanan | Tradisi Impian </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pernikahan.css">
+    <link rel="icon" href="/assets/logo TI.png">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <a href="index.html"><img src="/assets/logo TI.png" alt="Tradisi Impian"></a>
+            <span class="logo_name">TradisiImpian</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                        <span class="link_name">Paketan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                    <li><a href="tunangan.html">Tunangan</a></li>
+                    <li><a href="pranikah.html">Pranikah</a></li>
+                    <li><a href="pernikahan.html">Pernikahan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="pembelian.html">
+                    <i class='bx bx-cart'></i>
+                    <span class="link_name">Pembelian</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="pembelian.html">Pembelian</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-customize'></i>
+                        <span class="link_name">Perlengkapan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Perlengkapan</a></li>
+                    <li><a href="#">Dekorasi</a></li>
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">Riasan Pengantin</a></li>
+                    <li><a href="#">Undangan Souvenir</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="gedung.html">
+                    <i class='bx bx-buildings'></i>
+                    <span class="link_name">Gedung</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="gedung.html">Gedung</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-camera-movie'></i>
+                    <span class="link_name">Dokumentasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dokumentasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-body'></i>
+                    <span class="link_name">MC/Enternainment</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">MC/Enternainment</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <a href="index.html">
+                        <div class="profile-content">
+                            <img src="/assets/logo TI.png" alt="profileImg">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">Beranda</div>
+                        </div>
+                        <a href="index.html"> <i class='bx bx-log-out'></i> </a>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <div class="judul-container">
+                <div class="judul">
+                    <i class='bx bx-menu-alt-left'></i>
+                    <span class="text">Layanan</span>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <h2><span>Pernikahan</span></h2>
+                <p>Selamat datang di Layanan Acara Wedding kami yang kaya akan keindahan budaya Indonesia! Kami dengan
+                    senang
+                    hati menghadirkan pengalaman pernikahan yang memadukan kekayaan warisan budaya dengan sentuhan
+                    modern.
+                </p>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Cari adat yang anda inginkan...">
+                    <button onclick="searchProducts()" id="searchButton" aria-label="searchButton"><i
+                            class='bx bx-search-alt'></i></button>
+                </div>
+
+                <div id="noResults">
+                    <img src="/assets/eror.webp" alt="Data Yang Anda Cari Tidak Ada">
+                    <p>Maaf Adat Yang Anda Cari Tidak Ada</p>
+                </div>
+
+                <div class="product-container">
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatjawa.webp" alt="Adat Jawa">
+                        <h3>Adat Jawa</h3>
+                        <p>Pernikahan tradisional Jawa melibatkan ritual siraman untuk kesucian calon pengantin,
+                            Midodareni
+                            sebagai pertemuan keluarga, dan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 40.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 20.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatminang.webp" alt="Adat Minangkabau">
+                        <h3>Adat Minangkabau</h3>
+                        <p>Upacara Maarak Jando dan Maanta Pariaman menandai keseriusan pernikahan di Minangkabau,
+                            dengan
+                            pemotongan sirih adat yang khas...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 60.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 35.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatbatak.webp" alt="Adat Batak">
+                        <h3>Adat Batak</h3>
+                        <p>Mangulosi sebagai siraman, Holong Mangalap sebagai pertemuan keluarga, dan Pesta Adat Batak
+                            menampilkan tarian dan nyanyian...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 90.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 50.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatsunda.webp" alt="Adat Sunda">
+                        <h3>Adat Sunda</h3>
+                        <p>Adegan sebagai tahap pembicaraan, Ngidih sebagai upacara lamaran, dan Akad Nikah Sunda dengan
+                            tata cara khusus Sunda.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 75.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 25.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatbugis.webp" alt="Adat Bugis-Makassar">
+                        <h3>Adat Bugis-Makassar</h3>
+                        <p>Mappasikarawa untuk persiapan, Mappacci sebagai siraman, dan Mappajanci sebagai upacara
+                            pernikahan khas Bugis-Makassar.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 80.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 35.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatbali.webp" alt="Adat Bali">
+                        <h3>Adat Bali</h3>
+                        <p>Mesangih sebagai pertemuan keluarga, Mekala-Kalaan untuk pembuktian kesucian, dan Ngidih
+                            sebagai
+                            upacara lamaran dalam...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 85.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 50.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adataceh.webp" alt="Adat Aceh">
+                        <h3>Adat Aceh</h3>
+                        <p>Upacara adat pernikahan di Aceh mencakup prosesi adat siraman untuk membersihkan calon
+                            pengantin,
+                            serta upacara Mappaci untuk meresmikan pernikahan dengan penuh...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 82.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 60.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatdayak.webp" alt="Adat Dayak">
+                        <h3>Adat Dayak</h3>
+                        <p>Ngerunjuk sebagai upacara siraman dan lamaran, Ngebagau untuk menentukan tanggal baik, dan
+                            Ngusur
+                            sebagai upacara pindah rumah pasca-pernikahan dalam adat Dayak.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 75.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 45.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatpalembang.webp" alt="Adat Palembang">
+                        <h3>Adat Palembang</h3>
+                        <p>Adat pernikahan Palembang mencakup serangkaian acara seperti Tepung Tawar sebagai simbol
+                            kesucian, Siraman untuk membersihkan calon pengantin, dan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 60.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 25.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatbanten.webp" alt="Adat Banten">
+                        <h3>Adat Banten</h3>
+                        <p>Pernikahan tradisional di Banten melibatkan serangkaian upacara, termasuk prosesi Ngarasakeun
+                            sebagai tanda persetujuan keluarga, serta Tepung Tawar dan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 80.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 40.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adattoraja.webp" alt="Adat Toraja">
+                        <h3>Adat Toraja</h3>
+                        <p>Pernikahan tradisional Toraja di Sulawesi Selatan melibatkan upacara adat Rambu Solo' yang
+                            mencakup serangkaian tahapan, seperti Ma'randing, Tedong Silaga, dan...</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 75.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 40.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/adat-pernikahan/adatlampung.webp" alt="Adat Lampung">
+                        <h3>Adat Lampung</h3>
+                        <p>Pernikahan tradisional Lampung melibatkan serangkaian upacara, termasuk Siger, yaitu mahkota
+                            khas
+                            Lampung yang dikenakan oleh calon pengantin wanita.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 65.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 30.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail Pop Up -->
+                <div class="overlay" id="overlay1"></div>
+                <div class="popup" id="popup1">
+                    <div class="closeButton" onclick="hidePopup('popup1')"><i class='bx bx-x'></i></div>
+                    <div class="popup-container">
+                        <img src="/assets/adat-pernikahan/adatbatak.webp" alt="Adat Pernikahan Jawa">
+                        <h3>Rincian Harga Paket Komplit</h3>
+                        <h3>Rincian harga urutan Adat Pernikahan:</h3>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Kebutuhan</th>
+                                <th>Harga (Rp)</th>
+                            </tr>
+                            <tr>
+                                <td>Cincin pernikahan</td>
+                                <td>5.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya nikah di KUA</td>
+                                <td>500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Sewa lokasi resepsi di luar rumah</td>
+                                <td>3.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dekorasi pernikahan</td>
+                                <td>3.500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Katering</td>
+                                <td>8.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Undangan dan suvenir</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Rias dan baju pengantin</td>
+                                <td>5.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dokumentasi</td>
+                                <td>3.500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Hiburan dan pengisi acara</td>
+                                <td>1.500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya tak terduga</td>
+                                <td>500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya Adat</td>
+                                <td>15.000.000</td>
+                            </tr>
+                        </table>
+
+                        <h3>Urutan Adat Pernikahan:</h3>
+                        <br>
+                        <ol>
+                            <li>Pasang Tratag dan Tarub</li>
+                            <li>Kembar Mayang</li>
+                            <li>Pasang Tuwuhan</li>
+                            <li>Siraman</li>
+                            <li>Dodol Dawet</li>
+                            <li>Potong Tumpeng</li>
+                            <li>Dulangan Pungkasan</li>
+                            <li>Tanam Rambut dan Lepas Ayam</li>
+                            <li>Midodareni</li>
+                            <li>Upacara Pernikahan</li>
+                            <li>Upacara Panggih</li>
+                            <li>Balangan Gantal</li>
+                            <li>Ngidak Endhog atau Injak Telur</li>
+                            <li>Sinduran</li>
+                            <li>Bobot Timbang</li>
+                            <li>Minum Air Degan</li>
+                            <li>Kacar Kucur</li>
+                            <li>Dulangan</li>
+                            <li>Sungkeman</li>
+                            <li>Kirab Pengantin</li>
+                        </ol>
+                    </div>
+                    <a href="#" class="cart"><i class='bx bx-cart'></i>Pesan adat untuk menikah Sekarang</a>
+                </div>
+
+
+                <!-- Detail Pop Up -->
+                <div class="overlay" id="overlay1"></div>
+                <div class="popup" id="popup2">
+                    <div class="closeButton" onclick="hidePopup('popup2')"><i class='bx bx-x'></i></div>
+                    <div class="popup-container">
+                        <img src="/assets/adat-pernikahan/adatjawa.webp" alt="Adat Pernikahan Jawa">
+
+                        <h3>Rincian Harga Paket Hemat</h3>
+                        <h3>Rincian harga urutan Adat Pernikahan:</h3>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Kebutuhan</th>
+                                <th>Harga (Rp)</th>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td>Cincin pernikahan</td>
+                                <td>3.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya nikah di KUA</td>
+                                <td>500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Sewa lokasi resepsi di luar rumah</td>
+                                <td>2.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dekorasi pernikahan</td>
+                                <td>1.200.000</td>
+                            </tr>
+                            <tr>
+                                <td>Katering</td>
+                                <td>5.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Undangan dan suvenir</td>
+                                <td>800.000</td>
+                            </tr>
+                            <tr>
+                                <td>Rias dan baju pengantin</td>
+                                <td>2.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dokumentasi</td>
+                                <td>3.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Hiburan dan pengisi acara</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya tak terduga</td>
+                                <td>400.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya Adat</td>
+                                <td>5.000.000</td>
+                            </tr>
+                        </table>
+
+                        <h3>Halal pasangan mu sekarang ! dengan harga yang terjangkau</h3>
+                        <br>
+                    </div>
+                    <a href="#" class="cart"><i class='bx bx-cart'></i>Pesan adat untuk menikah Sekarang</a>
+                </div>
+
+
+                <!-- Footer -->
+                <footer>
+                    <div class="footer-info">
+                        <p><i class='bx bx-phone-call'></i>+62 8901234567</p>
+                        <p><i class='bx bx-envelope'></i>tradisiimpian@gmail.com</p>
+                        <p><i class='bx bx-map'></i>Jl. Sejati Larasan</p>
+                    </div>
+                    <span>Copyright © 2023 Tradisi Impian. All Rights Reserved</span>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/pernikahan.js"></script>
+</body>
+
+</html>

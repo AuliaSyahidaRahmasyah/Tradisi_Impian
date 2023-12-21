@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Layanan | Tradisi Impian </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pernikahan.css">
+    <link rel="icon" href="/assets/logo TI.png">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <a href="index.html"><img src="/assets/logo TI.png" alt="Tradisi Impian"></a>
+            <span class="logo_name">TradisiImpian</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                        <span class="link_name">Paketan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                    <li><a href="tunangan.html">Tunangan</a></li>
+                    <li><a href="pranikah.html">Pranikah</a></li>
+                    <li><a href="pernikahan.html">Pernikahan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="pembelian.html">
+                    <i class='bx bx-cart'></i>
+                    <span class="link_name">Pembelian</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="pembelian.html">Pembelian</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-customize'></i>
+                        <span class="link_name">Perlengkapan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Perlengkapan</a></li>
+                    <li><a href="#">Dekorasi</a></li>
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">Riasan Pengantin</a></li>
+                    <li><a href="#">Undangan Souvenir</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="gedung.html">
+                    <i class='bx bx-buildings'></i>
+                    <span class="link_name">Gedung</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="gedung.html">Gedung</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-camera-movie'></i>
+                    <span class="link_name">Dokumentasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dokumentasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-body'></i>
+                    <span class="link_name">MC/Enternainment</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">MC/Enternainment</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <a href="index.html">
+                        <div class="profile-content">
+                            <img src="/assets/logo TI.png" alt="profileImg">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">Beranda</div>
+                        </div>
+                        <a href="index.html"> <i class='bx bx-log-out'></i> </a>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <div class="judul-container">
+                <div class="judul">
+                    <i class='bx bx-menu-alt-left'></i>
+                    <span class="text">Layanan</span>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <h2><span>Tunangan</span></h2>
+                <p>Selamat datang di Layanan Acara Wedding kami yang kaya akan keindahan budaya Indonesia! Kami dengan
+                    senang
+                    hati menghadirkan pengalaman tunangan yang memadukan kekayaan warisan budaya dengan sentuhan
+                    modern.
+                </p>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Cari tema tunangan yang anda inginkan...">
+                    <button onclick="searchProducts()" id="searchButton" aria-label="searchButton"><i
+                            class='bx bx-search-alt'></i></button>
+                </div>
+
+                <div id="noResults">
+                    <img src="/assets/eror.webp" alt="Data Yang Anda Cari Tidak Ada">
+                    <p>Maaf Adat Yang Anda Cari Tidak Ada</p>
+                </div>
+
+                <div class="product-container">
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/coklat hijau.jpg" alt="">
+                        <h3>Coklat Hijau</h3>
+                        <p>Lamaran dengan tema perpaduan Coklat Hijau</p>
+                        <p>Warna cokelat mampu melambangkan kesan mahal, serta rasa hangat, nyaman, dan aman. Warna
+                            hijau merupakan lambang dari ketenangan, kedamaian, dan kesegaran.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 10.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 7.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/abuabu.jpg" alt="">
+                        <h3>Abu - abu</h3>
+                        <p>Lamaran dengan tema warna Abu - abu</p>
+                        <p>warna abu-abu adalah warna yang memperlihatkan sebuah keseriusan, rasa tanggung jawab, sifat
+                            kemandirian, sehingga memberikan kesan yang tenang dan stabil.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 10.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 7.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/biru.jpg" alt="">
+                        <h3>Biru</h3>
+                        <p>Lamaran dengan tema warna Biru</p>
+                        <p>Arti warna biru melambangkan kepercayaan dan kesetiaan. Warna biru akan memiliki sifat yang
+                            jujur dan tulus sehingga ia sangat dipercaya oleh orang lain.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 11.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 8.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/putih.jpg" alt="">
+                        <h3>Putih</h3>
+                        <p>Lamaran dengan tema warna Putih</p>
+                        <p>Arti warna putih mewakili sifat kepolosan, kemurnian, kesucian, kebaikan, dan kebersihan.
+                            warna putih menunjukkan rasa damai dan kesucian.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 12.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 9.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/coklat.jpg" alt="">
+                        <h3>Coklat</h3>
+                        <p>Lamaran dengan tema Coklat</p>
+                        <p>Warna cokelat mampu melambangkan kesan mahal, dan moder, serta rasa hangat, nyaman, aman,
+                            kuat, mampu diandalkan, serta pondasi kekuatan hidup.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 9.700.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/hijau.jpg" alt="">
+                        <h3>Hijau</h3>
+                        <p>Lamaran dengan tema warna Hijau</p>
+                        <p>Warna hijau merupakan lambang dari ketenangan, kedamaian, keselarasan, kedamaian, Alami, Daya
+                            Hidup, Martabat, Kekayaan, dan kesegaran.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 9.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 4.400.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/hitam.jpg" alt="">
+                        <h3>Hitam</h3>
+                        <p>Lamaran dengan tema Hitam</p>
+                        <p>Hitam dapat menggambarkan kewibawaan, keanggunan, kehormatan, kekuatan, bahkan kemewahan
+                            dengan kesan elegan. simbol cinta yang dalam, memalukan, dan romantis</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 11.800.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 8.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/out mewah.jpg" alt="">
+                        <h3>Putih Coklat Mewah</h3>
+                        <p>Lamaran dengan tema perpaduan Putih Coklat di Outdoor Mewah</p>
+                        <p>Warna putih selalu dihubungkan dengan kesucian, kebaikan, dan kebersihan. warna coklat
+                            memberikan kesan anggun dan elegan.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 12.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 8.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/outsimple.jpg" alt="">
+                        <h3>Putih Coklat Simple</h3>
+                        <p>Lamaran dengan tema perpaduan Putih Coklat di Outdoor Simple</p>
+                        <p>Warna putih selalu dihubungkan dengan kesucian, kebaikan, dan kebersihan. warna coklat
+                            memberikan kesan anggun dan elegan.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 10.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/pink.jpg" alt="">
+                        <h3>Pink</h3>
+                        <p>Lamaran dengan tema Pink</p>
+                        <p>Pink melambangkan suasana romantic, feminism kuat, kepedulian, serta aura kelemahlembuatan,
+                            bahagia, lembut dan memancarkan kasih sayang.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 10.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 4.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/putih coklat.jpg" alt="">
+                        <h3>Putih</h3>
+                        <p>Lamaran dengan tema Putih</p>
+                        <p>Arti warna putih mewakili sifat kepolosan, kemurnian, kesucian, kebaikan, dan kebersihan.
+                            warna putih menunjukkan rasa damai dan kesucian.</p>
+                        <p></p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 10.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 4.400.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/tunangan/ungu.jpg" alt="">
+                        <h3>Ungu</h3>
+                        <p>Lamaran dengan tema Ungu</p>
+                        <p>warna ungu adalah individu kreatif, emosional, mudah memahami sesuatu, keimanan, kesatuan
+                            lahir batin, dan penuh imajinasi.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 8.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 3.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail Pop Up -->
+                <div class="overlay" id="overlay1"></div>
+                <div class="popup" id="popup1">
+                    <div class="closeButton" onclick="hidePopup('popup1')"><i class='bx bx-x'></i></div>
+                    <div class="popup-container">
+                        <img src="/assets/tunangan/putih coklat.jpg" alt="">
+                        <h3>Rincian Harga Paket Komplit</h3>
+                        <h3>Rincian harga urutan Tunangan:</h3>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Kebutuhan</th>
+                                <th>Harga (Rp)</th>
+                            </tr>
+                            <tr>
+                                <td>Cincin Tunangan</td>
+                                <td>3.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Seserahan</td>
+                                <td>500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dekorasi</td>
+                                <td>3.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumsi</td>
+                                <td>8.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Rias dan baju tunangan</td>
+                                <td>5.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dokumentasi</td>
+                                <td>3.500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya tak terduga</td>
+                                <td>200.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya Tunangan Komplit</td>
+                                <td>10.000.000</td>
+                            </tr>
+                        </table>
+
+                        <h3>Urutan Tunangan:</h3>
+                        <br>
+                        <ol>
+                            <li>Permintaan Restu</li>
+                            <li>Tukar Cincin</li>
+                            <li>Penyampaian Mahar</li>
+                            <li>Doa dan Pengajian</li>
+                            <li>Makan Bersama</li>
+                        </ol>
+
+                    </div>
+                    <a href="#" class="cart"><i class='bx bx-cart'></i>Pesan untuk tunangan Sekarang</a>
+                </div>
+
+
+                <!-- Detail Pop Up -->
+                <div class="overlay" id="overlay1"></div>
+                <div class="popup" id="popup2">
+                    <div class="closeButton" onclick="hidePopup('popup2')"><i class='bx bx-x'></i></div>
+                    <div class="popup-container">
+                        <img src="/assets/tunangan/hijau.jpg" alt="Adat Pernikahan Jawa">
+
+                        <h3>Rincian Harga Paket Hemat</h3>
+                        <h3>Rincian harga urutan Tunangan:</h3>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Kebutuhan</th>
+                                <th>Harga (Rp)</th>
+                            </tr>
+                            <tr>
+                                <td>Cincin Tunangan</td>
+                                <td>2.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Seserahan</td>
+                                <td>400.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dekorasi</td>
+                                <td>2.500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumsi</td>
+                                <td>5.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Rias dan baju tunangan</td>
+                                <td>3.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Dokumentasi</td>
+                                <td>2.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya tak terduga</td>
+                                <td>200.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya Tunangan Komplit</td>
+                                <td>7.000.000</td>
+                            </tr>
+                        </table>
+
+                        <h3>Lamar pasanganmu sekarang juga !</h3>
+                        <br>
+                    </div>
+                    <a href="#" class="cart"><i class='bx bx-cart'></i>Pesan untuk tunangan Sekarang</a>
+                </div>
+
+
+                <!-- Footer -->
+                <footer>
+                    <div class="footer-info">
+                        <p><i class='bx bx-phone-call'></i>+62 8901234567</p>
+                        <p><i class='bx bx-envelope'></i>tradisiimpian@gmail.com</p>
+                        <p><i class='bx bx-map'></i>Jl. Sejati Larasan</p>
+                    </div>
+                    <span>Copyright © 2023 Tradisi Impian. All Rights Reserved</span>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/pernikahan.js"></script>
+</body>
+
+</html>

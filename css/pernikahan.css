@@ -1,0 +1,656 @@
+/* Google Fonts Import Link */
+:root {
+    --coklat-tua: #3F2412;
+    --coklat-muda: #674021;
+    --kuning: #C8A16A;
+    --hitam: #171717;
+    --putih: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+}
+
+body {
+    background-image: url(/assets/bg.png);
+    background-position: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    background: var(--coklat-tua);
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.sidebar.close {
+    width: 78px;
+}
+
+.sidebar .logo-details {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .logo-details img {
+    width: 80px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.sidebar .logo-details .logo_name {
+    font-size: 20px;
+    color: var(--putih);
+    font-weight: 600;
+    margin-right: 50px;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.sidebar.close .logo-details .logo_name {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.sidebar.close .nav-links {
+    overflow: visible;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar .nav-links li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover {
+    color: var(--putih);
+}
+
+.sidebar .nav-links li .iocn-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .iocn-link {
+    display: block
+}
+
+.sidebar .nav-links li i {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: var(--putih);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li.showMenu i.arrow {
+    transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.arrow {
+    display: none;
+}
+
+.sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--putih);
+    transition: all 0.4s ease;
+}
+
+.sidebar.close .nav-links li a .link_name {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-links li .sub-menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: var(--coklat-muda);
+    display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu {
+    display: block;
+}
+
+.sidebar .nav-links li .sub-menu a {
+    color: var(--putih);
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+    opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu .link_name {
+    display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name {
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+.sidebar .nav-links li .sub-menu.blank {
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar .profile-details {
+    position: fixed;
+    bottom: 0;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--coklat-muda);
+    padding: 12px 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar .profile-details .profile-content {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .profile-details img {
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 14px 0 12px;
+    background: var(--coklat-tua);
+    transition: all 0.5s ease;
+}
+
+.sidebar.close .profile-details img {
+    padding: 10px;
+}
+
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details {
+    color: var(--putih);
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details {
+    display: none;
+}
+
+.sidebar .profile-details {
+    font-size: 12px;
+}
+
+.home-section {
+    position: relative;
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+}
+
+.sidebar.close~.home-section {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+.home-section .home-content .bx-menu-alt-left,
+.home-section .home-content .text {
+    color: var(--putih);
+    font-size: 35px;
+}
+
+
+.home-section .home-content .judul-container {
+    background-color: var(--coklat-tua);
+    position: fixed;
+    margin-top: -100px;
+    padding: 25px;
+    z-index: 999;
+    width: 100%;
+}
+
+.home-section .home-content .bx-menu-alt-left {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.home-section .home-content .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/* Home Section */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--kuning);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 span {
+    display: inline;
+    position: relative;
+    padding-bottom: 10px;
+    color: var(--hitam);
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--hitam);
+}
+
+.container h2 span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--hitam);
+    border-radius: 50px;
+    bottom: 0;
+    left: 25%;
+    animation: borderAnimation 2s infinite;
+    transform-origin: center
+}
+
+@keyframes borderAnimation {
+    0% {
+        transform: scaleX(1)
+    }
+
+    50% {
+        transform: scaleX(0.1)
+    }
+
+    100% {
+        transform: scaleX(1)
+    }
+}
+
+
+/* Kolom pencarian */
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    padding: 12px;
+    border: none;
+    width: 90%;
+    border-radius: 10px;
+    font-family: Quicksand, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#searchButton {
+    padding: 12px 20px;
+    background-color: var(--coklat-muda);
+    color: var(--putih);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Quicksand, sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: var(--coklat-tua);
+}
+
+#noResults {
+    display: none;
+    font-weight: bold;
+}
+
+#noResults img {
+    margin: 0 0 0 -40px;
+}
+
+#noResults p {
+    margin-top: -20px;
+}
+
+
+/* Card Product */
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.product {
+    background-color: var(--hitam);
+    border: 3px solid rgb(255, 255, 255, 0);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 360px;
+}
+
+.product:hover {
+    border: 3px solid var(--putih);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: .5s ease all;
+    object-fit: cover;
+    color: var(--putih);
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    color: var(--kuning);
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-icon {
+    margin-top: 15px;
+}
+
+.product p {
+    font-size: 16px;
+    color: var(--putih);
+}
+
+.product a {
+    margin: auto;
+    background-color: transparent;
+    border: 2px var(--kuning) solid;
+    padding: 5px 7px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .4s ease;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.product .cart {
+    color: var(--putih);
+    background-color: var(--kuning);
+}
+
+.product a:hover {
+    opacity: 1;
+}
+
+/* Style untuk pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: var(--putih);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 600px;
+    overflow: scroll;
+    width: 1200px;
+    text-align: left;
+}
+
+.popupButton {
+    color: var(--putih);
+}
+
+.popup img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-size: top;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.popup h3 {
+    margin-top: 20px;
+}
+
+.popup ol {
+    margin-bottom: 30px;
+}
+
+.popup .cart {
+    color: var(--putih);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--coklat-muda);
+    opacity: 0.9;
+}
+
+.popup .cart:hover {
+    opacity: 1;
+}
+
+
+.popup a {
+    text-decoration: none;
+    color: var(--hitam);
+}
+
+.popup a i {
+    padding-right: 10px;
+}
+
+/* Style untuk latar belakang gelap saat pop-up muncul */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Style untuk button silang */
+.closeButton i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    color: var(--coklat-tua);
+}
+
+/* Animasi ikon silang */
+.closeButton i:hover {
+    color: var(--coklat-muda);
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 40px;
+    color: var(--hitam);
+    font-size: 16px;
+}
+
+footer .footer-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--coklat-tua);
+}
+
+footer .footer-info p {
+    margin-right: 15px;
+}
+
+footer .footer-info p i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--coklat-tua);
+}
+
+footer span {
+    font-weight: bold;
+}
+
+@media (max-width: 675px) {
+
+    #searchButton {
+        margin-top: 20px;
+    }
+
+    .popup {
+        max-width: 450px;
+    }
+
+    .popup img {
+        width: 390px;
+        margin-left: -15px;
+    }
+
+    .product-cart {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 300px) {
+    .sidebar.close .nav-links li .sub-menu {
+        display: none;
+    }
+
+    .sidebar {
+        width: 78px;
+    }
+
+    .sidebar.close {
+        width: 0;
+    }
+
+    .home-section {
+        left: 78px;
+        width: calc(100% - 78px);
+        z-index: 100;
+    }
+
+    .sidebar.close~.home-section {
+        width: 100%;
+        left: 0;
+    }
+
+    .popup {
+        width: 300px;
+    }
+
+    .popup img {
+        width: 390px;
+        margin-left: -15px;
+    }
+}

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Layanan | Tradisi Impian </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pernikahan.css">
+    <link rel="icon" href="/assets/logo TI.png">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <a href="index.html"><img src="/assets/logo TI.png" alt="Tradisi Impian"></a>
+            <span class="logo_name">TradisiImpian</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                        <span class="link_name">Paketan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Paketan</a></li>
+                    <li><a href="tunangan.html">Tunangan</a></li>
+                    <li><a href="pranikah.html">Pranikah</a></li>
+                    <li><a href="pernikahan.html">Pernikahan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="pembelian.html">
+                    <i class='bx bx-cart'></i>
+                    <span class="link_name">Pembelian</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="pembelian.html">Pembelian</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-customize'></i>
+                        <span class="link_name">Perlengkapan</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Perlengkapan</a></li>
+                    <li><a href="#">Dekorasi</a></li>
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">Riasan Pengantin</a></li>
+                    <li><a href="#">Undangan Souvenir</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="gedung.html">
+                    <i class='bx bx-buildings'></i>
+                    <span class="link_name">Gedung</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="gedung.html">Gedung</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-camera-movie'></i>
+                    <span class="link_name">Dokumentasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dokumentasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-body'></i>
+                    <span class="link_name">MC/Enternainment</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">MC/Enternainment</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <a href="index.html">
+                        <div class="profile-content">
+                            <img src="/assets/logo TI.png" alt="profileImg">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">Beranda</div>
+                        </div>
+                        <a href="index.html"> <i class='bx bx-log-out'></i> </a>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <div class="judul-container">
+                <div class="judul">
+                    <i class='bx bx-menu-alt-left'></i>
+                    <span class="text">Layanan</span>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <h2><span>Pranikah</span></h2>
+                <p>Selamat datang di Layanan Acara Wedding kami yang kaya akan keindahan budaya Indonesia!
+                    Tersedia untuk mengabadikan momen indah sebelum pernikahan Anda. Jasa pranikah kami menawarkan
+                    pelayanan profesional untuk menciptakan kenangan yang abadi melalui foto dan video yang indah.
+                </p>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Cari tema prewedding yang anda inginkan...">
+                    <button onclick="searchProducts()" id="searchButton" aria-label="searchButton"><i
+                            class='bx bx-search-alt'></i></button>
+                </div>
+
+                <div id="noResults">
+                    <img src="/assets/eror.webp" alt="Data Yang Anda Cari Tidak Ada">
+                    <p>Maaf Adat Yang Anda Cari Tidak Ada</p>
+                </div>
+
+                <div class="product-container">
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/Air Terjun.jpg" alt="">
+                        <h3>Air Terjun</h3>
+                        <p>Prewedding di air terjun memberikan keunikan romantis dengan latar belakang eksotis air
+                            terjun, menciptakan foto yang penuh makna dan keindahan. Fleksibilitas fotografi di lokasi
+                            ini menawarkan beragam latar belakang, memberikan sentuhan kreatif dan momen spesial yang
+                            tak terlupakan.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/ancol.jpg" alt="">
+                        <h3>Ancol</h3>
+                        <p>Prewedding di Ancol, Jakarta, menggabungkan keindahan alam dan kecanggihan kota metropolitan,
+                            menciptakan foto yang unik dan gaya. Dengan pilihan latar belakang seperti pantai dan
+                            pemandangan kota, Ancol memberikan pengalaman beragam bagi pasangan dalam momen istimewa
+                            mereka.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/bali.jpg" alt="">
+                        <h3>Bali</h3>
+                        <p>Prewedding di Bali memberikan pengalaman romantis dengan latar belakang alam tropis yang
+                            eksotis. Dengan pantai, sawah terasering, dan kekayaan budaya Bali, pasangan dapat
+                            mengabadikan momen istimewa mereka dalam setting yang memukau dan beragam.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/bandung.jpg" alt="">
+                        <h3>Bandung</h3>
+                        <p>Prewedding di Bandung menawarkan keunikan dengan latar belakang pegunungan dan nuansa kota
+                            artistik. Dengan pilihan latar belakang seperti kebun teh dan bangunan klasik, Bandung
+                            memberikan pasangan kesempatan untuk merayakan momen istimewa mereka dengan sentuhan elegan
+                            dan romantis.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/bromo.jpg" alt="">
+                        <h3>Bromo</h3>
+                        <p>Prewedding di Bromo menawarkan keindahan luar biasa dengan latar belakang gunung berapi yang
+                            megah dan lautan pasir yang eksotis. Dengan suasana mistis dan pemandangan matahari terbit
+                            yang memukau, pasangan dapat mengabadikan momen istimewa mereka dalam pengaturan alam yang
+                            dramatis dan mempesona.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label=""><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/candi.jpg" alt="">
+                        <h3>Candi</h3>
+                        <p>Prewedding di candi menawarkan keunikan sejarah dengan latar belakang arsitektur klasik yang
+                            indah. Dengan nuansa mistis dan keanggunan candi, pasangan dapat mengabadikan momen istimewa
+                            mereka dalam setting yang sarat makna dan artistik.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/danau.jpg" alt="">
+                        <h3>Danau</h3>
+                        <p>Prewedding di danau memberikan keindahan alam yang menenangkan dan romantis. Dengan latar
+                            belakang air yang tenang dan pemandangan sekitar yang memesona, pasangan dapat mengabadikan
+                            momen spesial mereka dalam suasana yang damai dan indah.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/gunung.jpg" alt="">
+                        <h3>Gunung</h3>
+                        <p>Prewedding di gunung memberikan keindahan alam yang dramatis dan petualangan romantis. Dengan
+                            latar belakang puncak gunung dan panorama alam yang menakjubkan, pasangan dapat mengabadikan
+                            momen istimewa mereka dalam setting yang penuh tantangan dan keajaiban alam.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/jogja.jpg" alt="">
+                        <h3>Jogja</h3>
+                        <p>Prewedding di Jogja menawarkan keunikan budaya dengan latar belakang arsitektur klasik dan
+                            nuansa tradisional. Dengan pilihan latar belakang seperti kraton dan candi, Jogja memberikan
+                            pasangan pengalaman fotografi prewedding yang memadukan keindahan alam dan warisan budaya,
+                            menciptakan momen istimewa dalam suasana yang khas dan berkesan.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/medan.jpg" alt="">
+                        <h3>Medan</h3>
+                        <p>Prewedding di Medan menawarkan keindahan alam yang beragam dengan latar belakang seperti
+                            Danau Toba dan perkebunan. Dengan nuansa kota yang modern dan kearifan lokal yang kaya,
+                            pasangan dapat mengabadikan momen spesial mereka dalam setting yang mencakup keanekaragaman
+                            alam dan budaya.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/pantai.jpg" alt="">
+                        <h3>Pantai</h3>
+                        <p>Prewedding di pantai memberikan keindahan alam yang eksotis dan romantis. Dengan latar
+                            belakang pasir putih dan deburan ombak, pasangan dapat mengabadikan momen istimewa mereka
+                            dalam suasana yang santai dan penuh kehangatan.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-aos="zoom-in-up">
+                        <img src="/assets/pranikah/semarang.jpg" alt="">
+                        <h3>Kota Lama</h3>
+                        <p>Kawasan Kota Lama Semarang - Badan Otorita Borobudur
+                            Kota Lama Semarang merupakan tempat wisata yang memiliki julukan Little Netherland. Kawasan
+                            ini dinamai Kota Lama karena memang bangunan-bangunan di wilayah tersebut memiliki gaya
+                            arsitektur zaman dulu.</p>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 5.000.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup1" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                        <div class="product-cart">
+                            <p>Harga: Rp. 2.500.000</p>
+                            <div class="product-icon">
+                                <a href="#" class="popupButton" data-popup-id="popup2" aria-label="Detail Adat"><i
+                                        class='bx bx-show'></i></a>
+                                <a href="#" class="cart" aria-label="Pesan adat untuk menikah"><i
+                                        class='bx bx-cart'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail Pop Up -->
+                <div class="overlay" id="overlay1"></div>
+                <div class="popup" id="popup1">
+                    <div class="closeButton" onclick="hidePopup('popup1')"><i class='bx bx-x'></i></div>
+                    <div class="popup-container">
+                        <img src="/assets/pranikah/bromo.jpg" alt="Adat Pernikahan Jawa">
+                        <h3>Rincian Harga Paket Komplit</h3>
+                        <h3>Rincian harga pranikah :</h3>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Kebutuhan</th>
+                                <th>Harga (Rp)</th>
+                            </tr>
+                            <tr>
+                                <td>Unlimited Photo</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Video Cinematic</td>
+                                <td>500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Make Up & Gaun & Jas</td>
+                                <td>2.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Flashdisk 16 GB</td>
+                                <td>2.500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Foto Frame</td>
+                                <td>800.000</td>
+                            </tr>
+                            <tr>
+                                <td>Tempat Foto</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya tak terduga</td>
+                                <td>200.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya Pranikah</td>
+                                <td>5.000.000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <a href="#" class="cart"><i class='bx bx-cart'></i>Pesan pranikah buat dokumentasi kenangan
+                        Sekarang</a>
+                </div>
+
+
+                <!-- Detail Pop Up -->
+                <div class="overlay" id="overlay1"></div>
+                <div class="popup" id="popup2">
+                    <div class="closeButton" onclick="hidePopup('popup2')"><i class='bx bx-x'></i></div>
+                    <div class="popup-container">
+                        <img src="/assets/pranikah/Air Terjun.jpg" alt="Adat Pernikahan Jawa">
+
+                        <h3>Rincian Harga Paket Hemat</h3>
+                        <h3>Rincian harga pranikah :</h3>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Kebutuhan</th>
+                                <th>Harga (Rp)</th>
+                            </tr>
+                            <tr>
+                                <td>Unlimited Photo</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Video Cinematic</td>
+                                <td>500.000</td>
+                            </tr>
+                            <tr>
+                                <td>Make Up & Gaun & Jas</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Flashdisk 8 GB</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Foto Frame</td>
+                                <td>800.000</td>
+                            </tr>
+                            <tr>
+                                <td>Tempat Foto</td>
+                                <td>1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya tak terduga</td>
+                                <td>200.000</td>
+                            </tr>
+                            <tr>
+                                <td>Biaya Pranikah</td>
+                                <td>2.500.000</td>
+                            </tr>
+                        </table>
+
+                        <h3>Urutan Persiapan :</h3>
+                        <br>
+                        <ol>
+                            <li>Lokasi Pemotretan</li>
+                            <li>Make Up & Baju Ganti</li>
+                            <li>Perlengkapan Darurat</li>
+                            <li>Makanan Ringan</li>
+                            <li>Biaya Tak Terduga</li>
+                            <li>Siapkan Kondisi Fisik</li>
+                            <li>Jaga Mood</li>
+                        </ol>
+                    </div>
+                    <a href="#" class="cart"><i class='bx bx-cart'></i>Pesan adat untuk menikah Sekarang</a>
+                </div>
+
+
+                <!-- Footer -->
+                <footer>
+                    <div class="footer-info">
+                        <p><i class='bx bx-phone-call'></i>+62 8901234567</p>
+                        <p><i class='bx bx-envelope'></i>tradisiimpian@gmail.com</p>
+                        <p><i class='bx bx-map'></i>Jl. Sejati Larasan</p>
+                    </div>
+                    <span>Copyright © 2023 Tradisi Impian. All Rights Reserved</span>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/pernikahan.js"></script>
+</body>
+
+</html>
