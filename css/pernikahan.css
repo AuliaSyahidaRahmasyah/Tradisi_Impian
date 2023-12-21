@@ -494,8 +494,8 @@ p {
     z-index: 1000;
     height: 600px;
     overflow: scroll;
-    max-width: 1100;
-    width: 75%;
+    max-width: 1200;
+    width: 80%;
     text-align: left;
 }
 
@@ -503,12 +503,9 @@ p {
     color: var(--putih);
 }
 
-.popup .popup-container {
-    max-width: 1110px;
-}
-
-.popup .popup-container img {
+.popup img {
     width: 100%;
+    border: 4px solid var(--kuning);
     height: 300px;
     object-fit: cover;
     background-size: top;
